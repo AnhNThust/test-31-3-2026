@@ -45,7 +45,7 @@ html {
         gap: 16px;
     }
 
-    >::before {
+    &::before {
         position: absolute;
         content: "";
         width: 421px;
@@ -112,12 +112,20 @@ html {
     .job {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 4px;
 
         max-width: 112px;
         padding: 24px;
+        border: 1px solid transparent;
         border-radius: 8px;
         cursor: pointer;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            border: 1px solid #DBD5EC;
+            box-shadow: 0 14px 16px 0 #290B801A;
+        }
 
         >img {
             width: 32px;
@@ -128,6 +136,7 @@ html {
             width: 73px;
             height: 24px;
             color: #281A51;
+            text-align: center;
         }
     }
 
@@ -153,8 +162,6 @@ html {
 
     .mc {
         background-color: #fff;
-        border: 1px solid #DBD5EC;
-        box-shadow: 0 14px 16px 0 #290B801A;
     }
 
     .economy {
